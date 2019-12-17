@@ -183,6 +183,9 @@
                         <viewLayoutGuide key="safeArea" id="MVE-hG-bmK"/>
                     </view>
                     <navigationItem key="navigationItem" id="OAF-sm-WP4"/>
+                    <connections>
+                        <outlet property="tableView" destination="lHi-C7-ETF" id="YBI-EB-Uzq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuv-ui-Bmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

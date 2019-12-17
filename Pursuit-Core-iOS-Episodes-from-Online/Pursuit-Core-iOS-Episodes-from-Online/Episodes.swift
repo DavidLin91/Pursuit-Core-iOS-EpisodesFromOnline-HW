@@ -9,5 +9,18 @@
 import Foundation
 
 struct AllEpisodes: Decodable {
-    let show: String
+    let episode: Episodes
+}
+
+struct Episodes: Decodable {
+    let id: Int
+    let name: String
+    let season: Int
+    let number: Int
+    let image: Image?
+}
+
+struct Image: Decodable {
+    let medium: String
+    let original: String
 }

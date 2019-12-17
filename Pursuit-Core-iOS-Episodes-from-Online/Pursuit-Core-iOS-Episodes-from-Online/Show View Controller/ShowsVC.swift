@@ -48,8 +48,7 @@ class ShowsVC: UIViewController {
             let indexPath = tableView.indexPathForSelectedRow else {
                 fatalError("could not retrieve index path for DetailedShowsVC")
         }
-        let show = shows[indexPath.row]
-        detailedShowsVC.allShows = show
+        detailedShowsVC.allEpsiodes = shows[indexPath.row]
     }
 }
 

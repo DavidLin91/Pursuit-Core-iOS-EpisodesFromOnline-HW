@@ -20,7 +20,16 @@ class EpisodeCell: UITableViewCell {
         episodeName.text = data.name
         episodeSeason.text = "Season: \(data.season.description), Episode: \(data.number.description)"
         
-        
+        NetworkHelper.shared.performDataTask(with: data.image?.medium ?? "") { (result) in
+            switch result {
+            case .failure(let appError):
+                print("app error: \(appError)")
+            case .success(let data):
+                DispatchQueue.main.async {
+                    let episodeImage = UIImage( data:data )
+                    self.episodeImage.image = episodeImage
+                }
+            }
+        }
     }
-
 }

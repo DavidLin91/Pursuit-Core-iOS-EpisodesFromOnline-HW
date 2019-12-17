@@ -27,7 +27,7 @@ class EpisodeDetailedVC: UIViewController {
         episodeNumber.text = "Episode: \(episodeDetail.number)"
         episodeDescription.text = episodeDetail.summary
         
-        NetworkHelper.shared.performDataTask(with: episodeDetail.image?.medium ?? "") { (result) in
+        NetworkHelper.shared.performDataTask(with: episodeDetail.image?.original ?? "") { (result) in
             switch result {
             case .failure(let appError):
                 print("app error: \(appError)")

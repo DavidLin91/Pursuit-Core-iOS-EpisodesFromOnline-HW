@@ -49,7 +49,7 @@ class ShowsVC: UIViewController {
                 fatalError("could not retrieve index path for DetailedShowsVC")
         }
         let show = shows[indexPath.row]
-        DetailedShowsVC. = 
+        detailedShowsVC.allShows = show
     }
 }
 
@@ -68,7 +68,7 @@ extension ShowsVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 200
     }
 }
 

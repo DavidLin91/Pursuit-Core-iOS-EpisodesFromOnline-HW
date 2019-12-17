@@ -9,9 +9,8 @@
 import UIKit
 
 class DetailedShowsVC: UIViewController {
-    @IBOutlet weak var episodeImage: UIImageView!
-    @IBOutlet weak var episodeName: UILabel!
-    @IBOutlet weak var episodeSeaon: UILabel!
+    
+    var allShows: AllTVShows!
     
     override func viewDidLoad() {
         super.viewDidLoad()

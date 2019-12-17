@@ -9,6 +9,9 @@
 import UIKit
 
 class DetailedShowTVCell: UITableViewCell {
-
+    @IBOutlet weak var episodeImage: UIImageView!
+    @IBOutlet weak var episodeName: UILabel!
+    @IBOutlet weak var episodeSeason: UILabel!
+    
 
 }

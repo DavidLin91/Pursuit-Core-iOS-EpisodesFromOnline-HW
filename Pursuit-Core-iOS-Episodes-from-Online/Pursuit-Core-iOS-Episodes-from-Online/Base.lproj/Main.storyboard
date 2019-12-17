@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--Detailed ShowsVC-->
+        <!--DetailedShowsVC-->
         <scene sceneID="o5Y-bP-sPD">
             <objects>
-                <viewController id="Uev-UH-EeD" customClass="DetailedShowsVC" customModule="Pursuit_Core_iOS_Episodes_from_Online" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Uev-UH-EeD" userLabel="DetailedShowsVC" customClass="DetailedShowsVC" customModule="Pursuit_Core_iOS_Episodes_from_Online" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VDz-VM-bGO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="episodeCell" rowHeight="171" id="lzP-KI-OnU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="episodeCell" rowHeight="171" id="lzP-KI-OnU" customClass="DetailedShowTVCell" customModule="Pursuit_Core_iOS_Episodes_from_Online" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="171"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lzP-KI-OnU" id="9kX-R3-afD">
@@ -164,6 +164,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="episodeImage" destination="qPJ-h6-9jm" id="l4f-Eb-FNp"/>
+                                            <outlet property="episodeName" destination="iDb-Lb-9T7" id="EF2-3y-2c3"/>
+                                            <outlet property="episodeSeason" destination="ckN-pw-sCK" id="E0V-Ff-S09"/>
                                             <segue destination="lKj-Zf-y0Q" kind="show" id="fTd-qp-ltg"/>
                                         </connections>
                                     </tableViewCell>
@@ -180,11 +183,6 @@
                         <viewLayoutGuide key="safeArea" id="MVE-hG-bmK"/>
                     </view>
                     <navigationItem key="navigationItem" id="OAF-sm-WP4"/>
-                    <connections>
-                        <outlet property="episodeImage" destination="qPJ-h6-9jm" id="cLb-JG-hmX"/>
-                        <outlet property="episodeName" destination="iDb-Lb-9T7" id="rOu-vg-orN"/>
-                        <outlet property="episodeSeaon" destination="ckN-pw-sCK" id="Y3D-Kf-31C"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuv-ui-Bmc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

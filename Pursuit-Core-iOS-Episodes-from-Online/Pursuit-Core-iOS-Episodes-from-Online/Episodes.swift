@@ -8,10 +8,6 @@
 
 import Foundation
 
-struct AllEpisodes: Decodable {
-    let episode: Episodes
-}
-
 struct Episodes: Decodable {
     let id: Int
     let name: String

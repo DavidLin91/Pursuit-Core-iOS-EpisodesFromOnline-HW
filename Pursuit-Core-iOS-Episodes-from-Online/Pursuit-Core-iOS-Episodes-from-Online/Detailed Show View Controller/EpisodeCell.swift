@@ -8,17 +8,17 @@
 
 import UIKit
 
-class DetailedShowTVCell: UITableViewCell {
+class EpisodeCell: UITableViewCell {
     
-    var allEpisodes: AllEpisodes!
+    var cellEpisodes: Episodes!
     
     @IBOutlet weak var episodeImage: UIImageView!
     @IBOutlet weak var episodeName: UILabel!
     @IBOutlet weak var episodeSeason: UILabel!
     
-    func updateUI(data: AllEpisodes) {
-        episodeName.text = allEpisodes.episode.name
-        
+    func updateUI(data: Episodes) {
+        episodeName.text = data.name
+        episodeSeason.text = "Season: \(data.season.description), Episode: \(data.number.description)"
         
         
     }

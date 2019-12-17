@@ -44,11 +44,14 @@ class ShowsVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailedShowsVC = segue.destination as? DetailedShowsVC,
+        guard let episodesVC = segue.destination as? EpisodeVC,
             let indexPath = tableView.indexPathForSelectedRow else {
-                fatalError("could not retrieve index path for DetailedShowsVC")
+                fatalError("could not retrieve index path for EpisodesVC")
         }
-        detailedShowsVC.allEpsiodes = shows[indexPath.row]
+        let episode = shows[indexPath.row]
+        episodesVC.allTVShows = episode
+        
+        //episodesVC.allEpisodes = shows[indexPath.row]
     }
 }
 
